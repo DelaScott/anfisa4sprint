@@ -2,7 +2,9 @@
 <!DOCTYPE html>
 <html lang="ru">
   <head>
-    <link rel="icon" href="{% static 'img/fav/fav.ico' %}" type="image">
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="{% static 'img/fav/favicon.ico' %}" type="image">
     <title>
       {% block title %}{% endblock %}
     </title>
@@ -10,10 +12,15 @@
   </head>
   <body>
     {% include "includes/header.html" %}
-    <main>
-      {% block content %}
-      {% endblock %}
+    <main class="pt-5 my-5">       
+      <div class="container">
+        <!-- Блок content -->
+        <h1 class="pb-2 mb-0">{% block content %}{% endblock %}</h1>
+        <!-- Конец блока content -->
+      </div> 
     </main>
     {% include "includes/footer.html" %}   
   </body>
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
 </html>
